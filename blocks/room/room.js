@@ -1,7 +1,16 @@
-BEM.DOM.decl('room', {
-    onSetMod: {
-        js: function() {
-            console.log('JS IS FIRED');
+modules.define('room', ['i-bem__dom'], function(provide, BEMDOM) {
+
+    BEMDOM.decl('room', {
+        onSetMod: {
+            js: {
+                inited: function() {
+                    console.log('JS IS FIRED');
+                }
+            }
         }
-    }
+
+    });
+
+    provide(BEMDOM);
+
 });
