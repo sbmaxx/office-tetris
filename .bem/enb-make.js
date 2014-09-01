@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = function (config) {
     config.mode("development", function () {
         config.node("pages/index", function (nodeConfig) {
@@ -60,16 +62,20 @@ module.exports = function (config) {
 
         function getLevels() {
 
-            var libs = ['bem-core', 'bem-components'],
+            var libs = ['bem-core', 'bem-components', 'bem-polymer'],
                 levels = ['common.blocks', 'desktop.blocks'],
-                ret = [];
+                ret = [],
+                path;
 
             libs.forEach(function(lib) {
                 levels.forEach(function(level) {
-                    ret.push(config.resolvePath({
-                        path: 'bower_components/' + lib + '/' + level,
-                        check: 'true'
-                    }));
+                    path = 'bower_components/' + lib + '/' + level;
+                    if (fs.existsSync(path)) {
+                        ret.push(config.resolvePath({
+                            path: path,
+                            check: 'true'
+                        }));
+                    }
                 });
             });
 
