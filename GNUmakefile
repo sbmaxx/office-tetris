@@ -20,19 +20,13 @@ server:: $(ENB)
 
 $(ENB):: install
 
-STYLUS = $(NODE_MODULES)/enb-stylus/techs/css-stylus.js
-
 .PHONY: install
 install:
 	@$(NPM) install
 	@$(BOWER) install
 
-.PHONY: production development
-production development:
-	YENV=$@ $(ENB) make $(ENB_FLAGS) pages/index
-	scp -P $(SSH_PORT) pages/index/_index.css rozhdestvenskiy.ru:/var/www/vhosts/rozhdestvenskiy.ru/public/
-	scp -P $(SSH_PORT) pages/index/_index.js rozhdestvenskiy.ru:/var/www/vhosts/rozhdestvenskiy.ru/public/
-	scp -P $(SSH_PORT) pages/index/index.html rozhdestvenskiy.ru:/var/www/vhosts/rozhdestvenskiy.ru/public/
+build:
+	./node_modules/.bin/enb make pages/index
 
 .PHONY: clean
 clean::
