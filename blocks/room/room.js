@@ -6,27 +6,26 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
                 inited: function() {
                     this.bindToDoc('keydown', this._onKey);
 
-                    var tablesForImages = [],
-                        tablesForVideo = [];
+                    this.tables = {
+                        images: [],
+                        video: []
+                    };
+                    this.staff = {
+                        images: ['nerevar', 'yurich', 'beam', 'dndushkin'],
+                        video: ['eroshinev', 'vasiliy', 'vorian', 'cherninely']
+                    };
+
+                    var _this = this;
 
                     this.findBlocksInside('table').forEach(function(table) {
                         if (table.params.which === 'images') {
-                            tablesForImages.push(table);
+                            _this.tables.images.push(table);
                         } else if (table.params.which === 'video') {
-                            tablesForVideo.push(table);
+                            _this.tables.video.push(table);
                         }
                     });
 
-                    var staffImages = ['nerevar', 'yurich', 'beam', 'dndushkin'];
-                    var staffVideo = ['eroshinev', 'vasiliy', 'vorian', 'cherninely'];
-
-                    this.randomize(tablesForImages, staffImages).forEach(function(data) {
-                        data.table.label(data.who);
-                    });
-
-                    this.randomize(tablesForVideo, staffVideo).forEach(function(data) {
-                        data.table.label(data.who);
-                    });
+                    this.bindTo('randomize', 'click', this._onRandomizeClick);
 
                 }
             }
@@ -41,6 +40,13 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
                 }
             });
 
+        },
+        _onRandomizeClick: function() {
+            ['images', 'video'].forEach(function(team) {
+                this.randomize(this.tables[team], this.staff[team]).forEach(function(data) {
+                    data.table.label(data.who);
+                });
+            }.bind(this));
         },
         _onKey: function(e) {
             channels('keyboard').emit('key', e);
