@@ -33,10 +33,10 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
 
         setTransform: function(transform) {
             this.transform = transform;
-            this._updateTransform();
+            this._updateTransform(false);
         },
 
-        _updateTransform: function() {
+        _updateTransform: function(trigger) {
 
             var element = this.domElem.get(0);
 
@@ -51,7 +51,9 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
             element.style.webkitTransform = style;
             element.style.transform = style;
 
-            this.emit('transform', transform);
+            if (trigger !== false) {
+                this.emit('transform', transform);
+            }
 
         },
 
