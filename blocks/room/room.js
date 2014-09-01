@@ -1,16 +1,16 @@
-modules.define('room', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEMDOM, channels) {
 
     BEMDOM.decl('room', {
         onSetMod: {
             js: {
                 inited: function() {
-                    console.log('JS IS FIRED');
-                    this.tables = this.findBlocksInside('table');
-                    console.log('tables: ', this.tables.length);
+                    this.bindToDoc('keydown', this._onKey);
                 }
             }
+        },
+        _onKey: function(e) {
+            channels('keyboard').emit('key', e);
         }
-
     });
 
     provide(BEMDOM);

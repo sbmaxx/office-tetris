@@ -1,3 +1,3 @@
-bh.match('table', function(ctx) {
+bh.match('tv', function(ctx) {
     ctx.mix({ block: 'movable', js: true });
 });
