@@ -28,24 +28,17 @@ module.exports = {
                             }
                         };
                     }),
-                    {
-                        block: 'table',
-                        js: {
-                            which: 'sbmaxx'
-                        },
-                        mods: {
-                            size: 'big'
+                    ['sbmaxx', 'nerevar', 'eroshinev'].map(function(who) {
+                        return {
+                            block: 'table',
+                            js: {
+                                which: who
+                            },
+                            mods: {
+                                size: 'big'
+                            }
                         }
-                    },
-                    {
-                        block: 'table',
-                        js: {
-                            which: 'allinne'
-                        },
-                        mods: {
-                            size: 'small'
-                        }
-                    },
+                    })
                 ],
                 [
                     {
@@ -63,7 +56,7 @@ module.exports = {
         {
             block: 'json',
             js: {
-                states: [{"x":147,"y":21,"angle":180},{"x":50,"y":-73,"angle":180},{"x":51,"y":-71,"angle":0},{"x":147,"y":-168,"angle":0},{"x":50,"y":143,"angle":0},{"x":49,"y":-49,"angle":180},{"x":147,"y":-47,"angle":0},{"x":146,"y":-238,"angle":180},{"x":42,"y":-483,"angle":90},{"x":251,"y":-629,"angle":630},{"x":238,"y":-926,"angle":270},{"x":318,"y":-459,"angle":0},{"x":267,"y":-654,"angle":0},{"x":278,"y":-825,"angle":0}]
+                states: [{"x":149,"y":11,"angle":180},{"x":51,"y":-84,"angle":180},{"x":52,"y":-84,"angle":0},{"x":147,"y":-178,"angle":0},{"x":55,"y":164,"angle":0},{"x":54,"y":-28,"angle":180},{"x":152,"y":-25,"angle":0},{"x":151,"y":-218,"angle":180},{"x":42,"y":-476,"angle":90},{"x":137,"y":-626,"angle":900},{"x":137,"y":-625,"angle":720},{"x":315,"y":-491,"angle":0},{"x":272,"y":-900,"angle":0},{"x":349,"y":-847,"angle":0}]
             }
         }
     ]
