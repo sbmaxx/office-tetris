@@ -10,6 +10,9 @@
             mods: {
                 provider: 'jquery'
             }
+        },
+        {
+            block: 'lodash'
         }
     ]
 })
