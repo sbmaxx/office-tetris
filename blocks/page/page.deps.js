@@ -6,7 +6,7 @@
             mods: { init: 'auto' }
         },
         {
-            block: 'bem-polymer',
+            block: 'polymer-gestures',
             mods: {
                 provider: 'jquery'
             }
