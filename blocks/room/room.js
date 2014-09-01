@@ -42,11 +42,15 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
 
         },
         _onRandomizeClick: function() {
-            ['images', 'video'].forEach(function(team) {
-                this.randomize(this.tables[team], this.staff[team]).forEach(function(data) {
-                    data.table.label(data.who);
-                });
-            }.bind(this));
+            for (var i = 0; i < 10; i ++) {
+                setTimeout(function() {
+                    ['images', 'video'].forEach(function(team) {
+                        this.randomize(this.tables[team], this.staff[team]).forEach(function(data) {
+                            data.table.label(data.who);
+                        });
+                    }.bind(this));
+                }.bind(this), i * 150);
+            }
         },
         _onKey: function(e) {
             channels('keyboard').emit('key', e);
