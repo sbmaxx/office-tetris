@@ -11,7 +11,7 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                         y: 0,
                         angle: 0
                     };
-                    channels('keyboard').on('key', this._onKey.bind(this));
+                    channels('keyboard').on('key', this._onKey, this);
                 }
             },
 
@@ -24,6 +24,15 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                 }
             }
 
+        },
+
+        getTransform: function() {
+            return this.transform;
+        },
+
+        setTransform: function(transform) {
+            this.transform = transform;
+            this._updateTransform();
         },
 
         _updateTransform: function() {
@@ -39,7 +48,10 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
 
             element.style.transform = style;
 
-            this.emit('transform', transform);
+            this.emit('transform', {
+                transform: transform,
+                id: this.domElem.index('.movable')
+            });
 
         },
 
