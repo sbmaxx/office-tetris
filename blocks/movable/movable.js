@@ -38,23 +38,34 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
 
         _updateTransform: function(trigger) {
 
-            var element = this.domElem.get(0);
-
             var transform = this.transform;
 
-            var style = [
-                'translate(' + transform.x + 'px, ' + transform.y + 'px)',
-                'rotate(' + transform.angle + 'deg)'
-            ].join(' ');
+            var translate = 'translate(' + transform.x + 'px, ' + transform.y + 'px)',
+                rotate = 'rotate(' + transform.angle + 'deg)';
 
-            element.style.mozTransform = style;
-            element.style.webkitTransform = style;
-            element.style.transform = style;
+            this._updateStyle(this.domElem.get(0), [translate, rotate].join(' '));
+
+            // если есть label, чтобы она не была перевёрнута
+            if (this.elem('label').length !== 0) {
+                var angle;
+                if (transform.angle % 360 === 180 && transform.angle !== 0) {
+                    angle = 180;
+                } else {
+                    angle = 0;
+                }
+                this._updateStyle(this.elem('label').get(0), rotate.replace(/\d+deg/, angle + 'deg'));
+            }
 
             if (trigger !== false) {
                 this.emit('transform', transform);
             }
 
+        },
+
+        _updateStyle: function(element, style) {
+            element.style.mozTransform = style;
+            element.style.webkitTransform = style;
+            element.style.transform = style;
         },
 
         _moveX: function(value) {
