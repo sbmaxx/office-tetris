@@ -20,6 +20,7 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                     if (this.__self.selected) {
                         this.__self.selected.delMod('selected');
                     }
+                    this.emit('select', this)
                     this.__self.selected = this;
                 }
             }
@@ -50,10 +51,7 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
             element.style.webkitTransform = style;
             element.style.transform = style;
 
-            this.emit('transform', {
-                transform: transform,
-                id: this.domElem.index('.movable')
-            });
+            this.emit('transform', transform);
 
         },
 

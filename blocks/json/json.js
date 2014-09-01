@@ -15,7 +15,10 @@ modules.define('json', ['i-bem__dom', 'functions__debounce'], function(provide, 
 
                     this.findBlockOutside('page').findBlocksInside('movable').forEach(function(block, i) {
                         block.on('transform', function(e, data) {
-                            this._onMovableTransform(e, data, block);
+                            this._onMovableTransform(e, data, block, i);
+                        }, this);
+                        block.on('select', function(e, data) {
+                            this._onMovableSelect(e, data, block, i);
                         }, this);
                         if (this._state[i]) {
                             block.setTransform(this._state[i]);
@@ -27,12 +30,18 @@ modules.define('json', ['i-bem__dom', 'functions__debounce'], function(provide, 
                 }
             }
         },
-        _onMovableTransform: function(e, data, block) {
-            this._state[data.id] = block.getTransform();
+        _onMovableTransform: function(e, data, block, index) {
+            this._state[index] = block.getTransform();
             this._updateState();
         },
+        _onMovableSelect: function(e, data, block, index) {
+            this._updateDebug(block.getTransform());
+        },
         _updateState: function() {
-            this.domElem.text(JSON.stringify(this._state));
+            this.elem('state').text(JSON.stringify(this._state));
+        },
+        _updateDebug: function(data) {
+            this.elem('debug').text(JSON.stringify(data));
         }
     });
 
