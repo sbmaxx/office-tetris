@@ -46,6 +46,8 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                 'rotate(' + transform.angle + 'deg)'
             ].join(' ');
 
+            element.style.mozTransform = style;
+            element.style.webkitTransform = style;
             element.style.transform = style;
 
             this.emit('transform', {
