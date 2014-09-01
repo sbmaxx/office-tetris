@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+.idea
+.project
+.svn
+.bem/tmp
+pages/*/*.*
+!pages/generator/*
+!pages/*/*.bemjson.js
+bower_components/*
