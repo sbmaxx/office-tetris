@@ -1,15 +1,19 @@
 bh.match('json', function(ctx, json) {
     ctx.content([
         { elem: 'variants', data: json.js },
-        { elem: 'debug' },
-        { elem: 'state' }
+        {
+            elem: 'debug',
+            content: [
+                { elem: 'selected' },
+                { elem: 'dump' }
+        ]}
     ]);
 });
-bh.match('json__debug', function(ctx) {
+bh.match('json__dump', function(ctx) {
     ctx.tag('textarea');
     ctx.attr('readonly');
 });
-bh.match('json__state', function(ctx) {
+bh.match('json__selected', function(ctx) {
     ctx.tag('textarea');
     ctx.attr('readonly');
 });

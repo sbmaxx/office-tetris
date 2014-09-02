@@ -56,7 +56,7 @@ modules.define('json', ['i-bem__dom', 'functions__debounce'], function(provide, 
             }));
         },
         _updateState: function() {
-            this.elem('state').text(JSON.stringify(this._state.data));
+            this.elem('dump').text(JSON.stringify(this._state.data));
 
             this._movable.forEach(function(block, i) {
                 if (this._state.data[i]) {
@@ -65,7 +65,7 @@ modules.define('json', ['i-bem__dom', 'functions__debounce'], function(provide, 
             }.bind(this));
         },
         _updateDebug: function(data) {
-            this.elem('debug').text(JSON.stringify(data));
+            this.elem('selected').text(JSON.stringify(data));
         }
     });
 
