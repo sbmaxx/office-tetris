@@ -68,6 +68,12 @@ module.exports = {
                 ],
                 {
                     block: 'tv'
+                },
+                {
+                    block: 'tree'
+                },
+                {
+                    block: 'tree'
                 }
             ]
         },
@@ -82,7 +88,9 @@ module.exports = {
                     'Можно выделять через shift несколько элементов и перемещать их вместе.</p>',
                     '<p><img src="../../blocks/bean-bag/bean-bag.png" alt="bean-bag"> — пуфик,<br><br>',
                     '<img src="../../blocks/tv/tv.png" alt="tv"> — тумбочка с ТВ,<br><br>',
-                    '<img src="../../blocks/table/table_size_big.png" alt="big table"> — большой прямоугольный стол.</p>'
+                    '<img src="../../blocks/tree/tree.png" alt="tree"> — растение,<br><br>',
+                    '<img src="../../blocks/table/table_size_small.png" alt="small table"> — маленький (120x60) прямоугольный стол, <br><br>',
+                    '<img src="../../blocks/table/table_size_big.png" alt="big table"> — большой (140x80) прямоугольный стол.</p>',
                 ].join(' ')
             }
         },
@@ -95,12 +103,12 @@ module.exports = {
                     block: 'json',
                     js: [
                         {
-                            name: 'the best one',
-                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":28,"y":-751,"angle":900},{"x":296,"y":-310,"angle":0},{"x":231,"y":-848,"angle":990},{"x":177,"y":-1027,"angle":180},{"x":285,"y":-866,"angle":0},{"x":14,"y":-1065,"angle":0},{"x":341,"y":-934,"angle":0}]
+                            name: 'zombik in the corner',
+                            data: [{"x":32,"y":446,"angle":540},{"x":130,"y":351,"angle":180},{"x":33,"y":352,"angle":0},{"x":131,"y":257,"angle":0},{"x":28,"y":-84,"angle":0},{"x":28,"y":-275,"angle":180},{"x":126,"y":-274,"angle":0},{"x":125,"y":-466,"angle":180},{"x":28,"y":-751,"angle":900},{"x":279,"y":-539,"angle":450},{"x":227,"y":-866,"angle":990},{"x":262,"y":-1076,"angle":180},{"x":118,"y":-1127,"angle":0},{"x":238,"y":-620,"angle":0},{"x":332,"y":-677,"angle":630},{"x":269,"y":-925,"angle":0},{"x":4,"y":-1287,"angle":0}]
                         },
                         {
-                            name: 'zombik in the corner',
-                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":28,"y":-751,"angle":900},{"x":292,"y":-542,"angle":180},{"x":231,"y":-848,"angle":990},{"x":177,"y":-1027,"angle":180},{"x":248,"y":-559,"angle":0},{"x":14,"y":-1065,"angle":0},{"x":332,"y":-677,"angle":630}]
+                            name: 'one of the best',
+                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":28,"y":-751,"angle":900},{"x":296,"y":-310,"angle":0},{"x":231,"y":-848,"angle":990},{"x":177,"y":-1027,"angle":180},{"x":285,"y":-866,"angle":0},{"x":14,"y":-1065,"angle":0},{"x":341,"y":-934,"angle":0}]
                         },
                         {
                             name: 'leads in center',
