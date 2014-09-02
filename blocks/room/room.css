@@ -3,6 +3,9 @@
     margin: 0 auto;
     width: 394px;
     height: 648px;
+}
+.room__wrapper
+{
     background-image: url('room.png');
 }
 .room__randomize
