@@ -24,13 +24,10 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
                             _this.tables.video.push(table);
                         }
                     });
-
-                    this.bindTo('randomize', 'click', this._onRandomizeClick);
-
                 }
             }
         },
-        randomize: function(tables, staff) {
+        _randomize: function(tables, staff) {
             staff = _.shuffle(staff);
             tables = _.shuffle(tables);
             return staff.map(function(value, i) {
@@ -41,11 +38,11 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
             });
 
         },
-        _onRandomizeClick: function() {
+        startRandomizer: function() {
             for (var i = 0; i < 10; i ++) {
                 setTimeout(function() {
                     ['images', 'video'].forEach(function(team) {
-                        this.randomize(this.tables[team], this.staff[team]).forEach(function(data) {
+                        this._randomize(this.tables[team], this.staff[team]).forEach(function(data) {
                             data.table.label(data.who);
                         });
                     }.bind(this));
