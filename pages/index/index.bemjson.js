@@ -60,7 +60,7 @@ module.exports = {
             content: {
                 elem: 'legend',
                 content: [
-                    '<p>Управление мышкой или клавишами курсора (→, ←, ↑, ↓), space — повернуть.',
+                    '<p>Управление мышкой или клавишами курсора (→, ←, ↑, ↓), space — повернуть. Без shift смещение на 5px, с shift — 1px.',
                     'Можно выделять через shift несколько элементов и перемещать их вместе.</p>',
                     '<p><img src="../../blocks/bean-bag/bean-bag.png" alt="bean-bag"> — пуфик,<br><br>',
                     '<img src="../../blocks/tv/tv.png" alt="tv"> — тумбочка с ТВ,<br><br>',

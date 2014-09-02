@@ -70,12 +70,12 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
         },
 
         _moveX: function(value) {
-            this.transform.x += Math.round(value * Math.PI);
+            this.transform.x += value;
             this._updateTransform();
         },
 
         _moveY: function(value) {
-            this.transform.y += Math.round(value * Math.PI);;
+            this.transform.y += value;
             this._updateTransform();
         },
 
@@ -131,28 +131,30 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                 return;
             }
 
+            var multiplier = originalEvent.shiftKey ? 1 : 5;
+
             switch(originalEvent.keyCode) {
                 // left arrow
                 case 37:
-                    this._moveX(-1);
+                    this._moveX(-1 * multiplier);
                     originalEvent.preventDefault();
                     break;
 
                 // right arrow
                 case 39:
-                    this._moveX(1);
+                    this._moveX(1 * multiplier);
                     originalEvent.preventDefault();
                     break;
 
                 // up arrow
                 case 38:
-                    this._moveY(-1);
+                    this._moveY(-1 * multiplier);
                     originalEvent.preventDefault();
                     break;
 
                 // down arrow
                 case 40:
-                    this._moveY(1);
+                    this._moveY(1 * multiplier);
                     originalEvent.preventDefault();
                     break;
 
