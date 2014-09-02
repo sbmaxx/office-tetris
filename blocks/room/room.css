@@ -11,3 +11,8 @@
     background-image: url('room.png');
     background-repeat: no-repeat;
 }
+.page__legend img
+{
+    vertical-align: middle;
+    height: 40px
+}

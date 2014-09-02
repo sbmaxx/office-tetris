@@ -57,13 +57,16 @@ module.exports = {
             elem: 'section',
             elemMods: { position: 'right' },
             title: 'Легенда',
-            content: [
-                'Управление мышкой или клавишами курсора (→, ←, ↑, ↓), space — повернуть.',
-                'Можно выделять через shift несколько элементов и перемещать их вместе.',
-                '<img src="../../blocks/bean-bag/bean-bag.png" alt="bean-bag"> — пуфик,',
-                '<img src="../../blocks/tv/tv.png" alt="tv"> — тумбочка с ТВ,',
-                '<img src="../../blocks/table/table_size_big.png" alt="big table"> — большой прямоугольный стол.'
-            ].join('<br>')
+            content: {
+                elem: 'legend',
+                content: [
+                    '<p>Управление мышкой или клавишами курсора (→, ←, ↑, ↓), space — повернуть.',
+                    'Можно выделять через shift несколько элементов и перемещать их вместе.</p>',
+                    '<p><img src="../../blocks/bean-bag/bean-bag.png" alt="bean-bag"> — пуфик,<br><br>',
+                    '<img src="../../blocks/tv/tv.png" alt="tv"> — тумбочка с ТВ,<br><br>',
+                    '<img src="../../blocks/table/table_size_big.png" alt="big table"> — большой прямоугольный стол.</p>'
+                ].join(' ')
+            }
         },
         {
             elem: 'section',
