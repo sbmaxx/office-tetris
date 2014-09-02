@@ -12,16 +12,14 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
                         angle: 0
                     };
                     channels('keyboard').on('key', this._onKey, this);
+                    this.__self.on('track', this._onTrack, this);
                 }
             },
 
             selected: {
                 yes: function() {
-                    if (this.__self.selected) {
-                        this.__self.selected.delMod('selected');
-                    }
+                    this.__self.selected.push(this);
                     this.emit('select', this)
-                    this.__self.selected = this;
                 }
             }
 
@@ -39,15 +37,14 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
         _updateTransform: function(trigger) {
 
             var transform = this.transform;
+            var angle;
 
             var translate = 'translate(' + transform.x + 'px, ' + transform.y + 'px)',
                 rotate = 'rotate(' + transform.angle + 'deg)';
 
             this._updateStyle(this.domElem.get(0), [translate, rotate].join(' '));
-
             // если есть label, чтобы она не была перевёрнута
             if (this.elem('label').length !== 0) {
-                var angle;
                 if (transform.angle % 360 === 180 && transform.angle !== 0) {
                     angle = 180;
                 } else {
@@ -68,6 +65,10 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
             element.style.transform = style;
         },
 
+        _getSelected: function() {
+            return this.__self.selected;
+        },
+
         _moveX: function(value) {
             this.transform.x += Math.round(value * Math.PI);
             this._updateTransform();
@@ -83,26 +84,45 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
             this._updateTransform();
         },
 
-        _onTrack: function(e) {
-            // разобраться с двумя событиями
-            if (typeof e.originalEvent !== 'undefined') {
+        _clearSelection: function() {
+            if (this.__self.selected.length) {
+                this.__self.selected.forEach(function(block) {
+                    block.delMod('selected');
+                });
+                this.__self.selected.length = 0;
+            }
+        },
+
+        _onMouseTrack: function(e) {
+            this.__self.emit('track', {
+                x: e.ddx,
+                y: e.ddy
+            })
+        },
+
+        _onMouseTrackStart: function(e) {
+            this.setMod('selected', 'yes');
+        },
+
+        _onMouseDown: function(e) {
+            if (e.originalEvent.shiftKey !== true && !this.hasMod('selected', 'yes')) {
+                this._clearSelection();
+            }
+            this.setMod('selected', 'yes');
+        },
+
+        _onTrack: function(e, data) {
+            if (!this.hasMod('selected', 'yes')) {
                 return;
             }
-            if (e.ddx) {
-                this.transform.x += e.ddx;
+
+            if (data.x) {
+                this.transform.x += data.x;
             }
-            if (e.ddy) {
-                this.transform.y += e.ddy;
+            if (data.y) {
+                this.transform.y += data.y;
             }
             this._updateTransform();
-        },
-
-        _onTrackStart: function(e) {
-            this.setMod('selected', 'yes');
-        },
-
-        _onClick: function(e) {
-            this.setMod('selected', 'yes');
         },
 
         _onKey: function(e, originalEvent) {
@@ -146,17 +166,24 @@ modules.define('movable', ['i-bem__dom', 'events__channels'], function(provide, 
         }
 
     }, {
-        selected: null,
+        selected: [],
         live: function() {
             this.liveBindTo('track', function(e) {
-                this._onTrack(e);
+                // разобраться с двумя событиями
+                if (typeof e.originalEvent !== 'undefined') {
+                    return;
+                }
+                this._onMouseTrack(e);
             });
-            this.liveBindTo('click', function(e) {
-                this._onClick(e);
+            this.liveBindTo('mousedown', function(e) {
+                this._onMouseDown(e);
             });
             this.liveBindTo('trackstart', function(e) {
-                this._onTrackStart(e);
+                this._onMouseTrackStart(e);
             });
+        },
+        getSelected: function() {
+            return this.selected;
         }
     });
 

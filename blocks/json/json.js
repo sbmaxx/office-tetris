@@ -51,7 +51,9 @@ modules.define('json', ['i-bem__dom', 'functions__debounce'], function(provide, 
             this._updateState();
         },
         _onMovableSelect: function(e, data, block, index) {
-            this._updateDebug(block.getTransform());
+            this._updateDebug(BEMDOM.blocks.movable.getSelected().map(function(block) {
+                return block.getTransform();
+            }));
         },
         _updateState: function() {
             this.elem('state').text(JSON.stringify(this._state.data));
