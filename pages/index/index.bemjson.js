@@ -28,7 +28,7 @@ module.exports = {
                             }
                         };
                     }),
-                    ['sbmaxx', 'nerevar', 'eroshinev'].map(function(who) {
+                    ['sbmaxx', 'nerevar'].map(function(who) {
                         return {
                             block: 'table',
                             js: {
@@ -38,7 +38,25 @@ module.exports = {
                                 size: 'big'
                             }
                         }
-                    })
+                    }),
+                    {
+                        block: 'table',
+                        js: {
+                            which: 'eroshinev'
+                        },
+                        mods: {
+                            size: 'small'
+                        }
+                    },
+                    {
+                        block: 'table',
+                        js: {
+                            which: 'tech'
+                        },
+                        mods: {
+                            size: 'big'
+                        }
+                    }
                 ],
                 [
                     {
@@ -78,7 +96,7 @@ module.exports = {
                     js: [
                         {
                             name: 'the best one',
-                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":30,"y":-730,"angle":180},{"x":296,"y":-310,"angle":0},{"x":223,"y":-881,"angle":990},{"x":130,"y":-1041,"angle":0},{"x":285,"y":-849,"angle":0},{"x":349,"y":-847,"angle":0}]
+                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":28,"y":-751,"angle":900},{"x":296,"y":-310,"angle":0},{"x":227,"y":-846,"angle":990},{"x":159,"y":-1026,"angle":180},{"x":285,"y":-849,"angle":0},{"x":349,"y":-847,"angle":0}]
                         },
                         {
                             name: 'leads in center',
