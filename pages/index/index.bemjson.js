@@ -17,46 +17,18 @@ module.exports = {
             block: 'room',
             content: [
                 [
-                    [0,1,2,3,4,5,6,7].map(function(val) {
+                    ['sbmaxx', 'beam', 'vorian', 'xescoder', 'cherninely', 'vasiliy',
+                    'nerevar', 'dndushkin', 'allinne', 'yurich', 'invntrm'].map(function(val) {
                         return {
                             block: 'table',
                             js: {
-                                which: val < 4 ? 'images' : 'video'
+                                which: val
                             },
                             mods: {
                                 size: 'big'
                             }
                         };
                     }),
-                    ['sbmaxx', 'nerevar'].map(function(who) {
-                        return {
-                            block: 'table',
-                            js: {
-                                which: who
-                            },
-                            mods: {
-                                size: 'big'
-                            }
-                        }
-                    }),
-                    {
-                        block: 'table',
-                        js: {
-                            which: 'eroshinev'
-                        },
-                        mods: {
-                            size: 'small'
-                        }
-                    },
-                    {
-                        block: 'table',
-                        js: {
-                            which: 'tech'
-                        },
-                        mods: {
-                            size: 'big'
-                        }
-                    }
                 ],
                 [
                     {
@@ -103,20 +75,8 @@ module.exports = {
                     block: 'json',
                     js: [
                         {
-                            name: 'zombik in the corner',
-                            data: [{"x":32,"y":446,"angle":540},{"x":130,"y":351,"angle":180},{"x":33,"y":352,"angle":0},{"x":131,"y":257,"angle":0},{"x":28,"y":-84,"angle":0},{"x":28,"y":-275,"angle":180},{"x":126,"y":-274,"angle":0},{"x":125,"y":-466,"angle":180},{"x":28,"y":-751,"angle":900},{"x":279,"y":-539,"angle":450},{"x":227,"y":-866,"angle":990},{"x":262,"y":-1076,"angle":180},{"x":118,"y":-1127,"angle":0},{"x":238,"y":-620,"angle":0},{"x":332,"y":-677,"angle":630},{"x":269,"y":-925,"angle":0},{"x":4,"y":-1287,"angle":0}]
-                        },
-                        {
-                            name: 'one of the best',
-                            data: [{"x":50,"y":446,"angle":540},{"x":146,"y":351,"angle":180},{"x":50,"y":352,"angle":0},{"x":146,"y":257,"angle":0},{"x":50,"y":-78,"angle":0},{"x":50,"y":-269,"angle":180},{"x":146,"y":-268,"angle":0},{"x":146,"y":-459,"angle":180},{"x":28,"y":-751,"angle":900},{"x":296,"y":-310,"angle":0},{"x":231,"y":-848,"angle":990},{"x":177,"y":-1027,"angle":180},{"x":285,"y":-866,"angle":0},{"x":14,"y":-1065,"angle":0},{"x":341,"y":-934,"angle":0}]
-                        },
-                        {
-                            name: 'leads in center',
-                            data: [{"x":149,"y":11,"angle":180},{"x":51,"y":-84,"angle":180},{"x":52,"y":-84,"angle":0},{"x":147,"y":-178,"angle":0},{"x":55,"y":164,"angle":0},{"x":54,"y":-28,"angle":180},{"x":152,"y":-25,"angle":0},{"x":151,"y":-218,"angle":180},{"x":28,"y":-477,"angle":90},{"x":124,"y":-637,"angle":900},{"x":126,"y":-637,"angle":720},{"x":293,"y":-501,"angle":270},{"x":272,"y":-980,"angle":0},{"x":2,"y":-787,"angle":0}]
-                        },
-                        {
-                            name: 'sbmaxx on reception',
-                            data: [{"x":149,"y":11,"angle":180},{"x":51,"y":-84,"angle":180},{"x":52,"y":-84,"angle":0},{"x":147,"y":-178,"angle":0},{"x":55,"y":164,"angle":0},{"x":54,"y":-28,"angle":180},{"x":152,"y":-25,"angle":0},{"x":151,"y":-218,"angle":180},{"x":287,"y":-448,"angle":180},{"x":23,"y":-624,"angle":900},{"x":31,"y":-625,"angle":720},{"x":289,"y":-495,"angle":0},{"x":272,"y":-900,"angle":0},{"x":116,"y":-853,"angle":0},{"x":116,"y":-990,"angle":0}]
+                            name: 'current',
+                            data: [{"x":37,"y":10,"angle":810},{"x":134,"y":-87,"angle":630},{"x":28,"y":9,"angle":180},{"x":29,"y":13,"angle":0},{"x":125,"y":-181,"angle":180},{"x":125,"y":-179,"angle":360},{"x":130,"y":-28,"angle":0},{"x":33,"y":-220,"angle":180},{"x":287,"y":-450,"angle":1170},{"x":33,"y":-313,"angle":720},{"x":129,"y":-503,"angle":1260},{"x":267,"y":-879,"angle":180},{"x":249,"y":-528,"angle":0},{"x":330,"y":-596,"angle":630},{"x":89,"y":-1151,"angle":630},{"x":253,"y":-909,"angle":0},{"x":4,"y":-1287,"angle":0}]
                         }
                     ]
                 },
