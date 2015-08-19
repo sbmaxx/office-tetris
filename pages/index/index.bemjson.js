@@ -17,8 +17,10 @@ module.exports = {
             block: 'room',
             content: [
                 [
-                    ['sbmaxx', 'beam', 'vorian', 'xescoder', 'cherninely', 'vasiliy',
-                    'nerevar', 'dndushkin', 'allinne', 'yurich', 'invntrm'].map(function(val) {
+                    [
+                        'sbmaxx', 'beam', 'vorian', 'xescoder', 'cherninely', 'hjkos', 'eroshinev',
+                        'nerevar', 'dndushkin', 'allinne', 'yurich', 'invntrm', 'tenorok', 'developer'
+                    ].map(function(val) {
                         return {
                             block: 'table',
                             js: {
@@ -76,7 +78,7 @@ module.exports = {
                     js: [
                         {
                             name: 'current',
-                            data: [{"x":37,"y":10,"angle":810},{"x":134,"y":-87,"angle":630},{"x":28,"y":9,"angle":180},{"x":29,"y":13,"angle":0},{"x":125,"y":-181,"angle":180},{"x":125,"y":-179,"angle":360},{"x":130,"y":-28,"angle":0},{"x":33,"y":-220,"angle":180},{"x":287,"y":-450,"angle":1170},{"x":33,"y":-313,"angle":720},{"x":129,"y":-503,"angle":1260},{"x":267,"y":-879,"angle":180},{"x":249,"y":-528,"angle":0},{"x":330,"y":-596,"angle":630},{"x":89,"y":-1151,"angle":630},{"x":253,"y":-909,"angle":0},{"x":4,"y":-1287,"angle":0}]
+                            data: [{"x":33,"y":7,"angle":1080},{"x":132,"y":-88,"angle":1080},{"x":28,"y":9,"angle":180},{"x":29,"y":13,"angle":0},{"x":125,"y":-181,"angle":180},{"x":125,"y":-177,"angle":360},{"x":130,"y":-28,"angle":0},{"x":33,"y":-220,"angle":180},{"x":282,"y":-445,"angle":1170},{"x":33,"y":-313,"angle":720},{"x":129,"y":-505,"angle":1260},{"x":236,"y":-1043,"angle":180},{"x":222,"y":-603,"angle":0},{"x":364,"y":-611,"angle":630},{"x":263,"y":-1043,"angle":630},{"x":253,"y":-909,"angle":0},{"x":255,"y":-782,"angle":900}]
                         }
                     ]
                 },
