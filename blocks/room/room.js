@@ -11,8 +11,8 @@ modules.define('room', ['i-bem__dom', 'events__channels'], function(provide, BEM
                         video: []
                     };
                     this.staff = {
-                        images: ['allinne', 'yurich', 'beam', 'dndushkin'],
-                        video: ['developer', 'vasiliy', 'vorian', 'cherninely']
+                        images: ['allinne', 'yurich', 'nerevar', 'dndushkin', 'tenorok', 'invntrm'],
+                        video: ['developer', 'hjkos', 'xescoder', 'cherninely']
                     };
 
                     var _this = this;

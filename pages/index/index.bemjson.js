@@ -63,7 +63,6 @@ module.exports = {
                     '<p><img src="../../blocks/bean-bag/bean-bag.png" alt="bean-bag"> — пуфик,<br><br>',
                     '<img src="../../blocks/tv/tv.png" alt="tv"> — тумбочка с ТВ,<br><br>',
                     '<img src="../../blocks/tree/tree.png" alt="tree"> — растение,<br><br>',
-                    '<img src="../../blocks/table/table_size_small.png" alt="small table"> — маленький (120x60) прямоугольный стол, <br><br>',
                     '<img src="../../blocks/table/table_size_big.png" alt="big table"> — большой (140x80) прямоугольный стол.</p>',
                 ].join(' ')
             }
@@ -78,7 +77,7 @@ module.exports = {
                     js: [
                         {
                             name: 'current',
-                            data: [{"x":33,"y":7,"angle":1080},{"x":132,"y":-88,"angle":1080},{"x":28,"y":9,"angle":180},{"x":29,"y":13,"angle":0},{"x":125,"y":-181,"angle":180},{"x":125,"y":-177,"angle":360},{"x":130,"y":-28,"angle":0},{"x":33,"y":-220,"angle":180},{"x":282,"y":-445,"angle":1170},{"x":33,"y":-313,"angle":720},{"x":129,"y":-505,"angle":1260},{"x":236,"y":-1043,"angle":180},{"x":222,"y":-603,"angle":0},{"x":364,"y":-611,"angle":630},{"x":263,"y":-1043,"angle":630},{"x":253,"y":-909,"angle":0},{"x":255,"y":-782,"angle":900}]
+                            data: [{"x":213,"y":921,"angle":1800},{"x":309,"y":826,"angle":1800},{"x":308,"y":565,"angle":540},{"x":212,"y":-43,"angle":180},{"x":213,"y":-285,"angle":360},{"x":308,"y":-233,"angle":540},{"x":212,"y":185,"angle":540},{"x":212,"y":-327,"angle":360},{"x":213,"y":-260,"angle":1620},{"x":311,"y":-255,"angle":1080},{"x":214,"y":-350,"angle":1440},{"x":308,"y":-707,"angle":360},{"x":310,"y":-640,"angle":180},{"x":309,"y":-1140,"angle":1080},{"x":499,"y":-912,"angle":630},{"x":483,"y":-804,"angle":0},{"x":499,"y":-806,"angle":1350},{"x":443,"y":-1050,"angle":0},{"x":460,"y":-1266,"angle":0},{"x":460,"y":-1266,"angle":0}]
                         }
                     ]
                 },
