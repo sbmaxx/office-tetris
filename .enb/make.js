@@ -15,6 +15,7 @@ var techs = {
 
         // bh
         bh: require('enb-bh/techs/bh-server'),
+        bhClient: require('enb-bh/techs/bh-client'),
         bemjsonToHtml: require('enb-bh/techs/html-from-bemjson')
     },
     enbBemTechs = require('enb-bem-techs'),
@@ -55,6 +56,11 @@ module.exports = function(config) {
                 jsAttrScheme: 'json'
             }],
 
+            [techs.bhClient, {
+                jsAttrName: 'data-bem',
+                jsAttrScheme: 'json'
+            }],
+
             // html
             [techs.bemjsonToHtml],
 
@@ -71,6 +77,6 @@ module.exports = function(config) {
             [techs.borschik, { sourceTarget: '?.css', destTarget: '?.min.css', tech: 'cleancss', freeze: true, minify: isProd }]
         ]);
 
-        nodeConfig.addTargets(['?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets(['?.html', '?.min.css', '?.min.js', '?.bh.client.js']);
     });
 };

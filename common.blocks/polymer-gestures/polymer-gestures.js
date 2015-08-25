@@ -8,7 +8,6 @@ modules.define('polymer-gestures', ['jquery'], function(provide, $) {
         props: [ 'ddx', 'ddy' ]
     };
     ['track', 'pinch', 'rotate', 'trackend', 'pinchstart', 'pinchend'].forEach(function(event) {
-        console.log(event);
         $.event.special[event] = {
             add: function() {
                 console.log('event binded');

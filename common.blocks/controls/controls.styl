@@ -1,0 +1,26 @@
+.controls {
+    &__item {
+        position: relative
+        height: 50px
+        line-height: @height
+    }
+    &__item + &__item {
+        margin-top: 10px
+    }
+    &__label {
+        margin-left: 3px
+    }
+    &__action {
+        padding-bottom: 1px
+        border-bottom: 1px dotted black
+        cursor: pointer
+    }
+    &__icon {
+        position: absolute
+        right: 5px
+        filter: grayscale()
+    }
+    &__icon.icons_type_tv {
+        top: 15px
+    }
+}

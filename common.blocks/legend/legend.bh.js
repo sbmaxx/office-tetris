@@ -1,42 +1,23 @@
 module.exports = function(bh) {
-    bh.match('legend', function(ctx, json) {
+
+    bh.match('legend', function(ctx) {
+
         ctx.content([
             {
                 elem: 'text',
-                content: json.text
-            },
-            {
-                elem: 'item',
-                label: 'пуфик',
-                content: {
-                    block: 'icons',
-                    elem: 'bean-bag'
-                }
-            },
-            {
-                elem: 'item',
-                label: 'тумбочка с ТВ',
-                content: {
-                    block: 'icons',
-                    elem: 'tv'
-                }
-            },
-            {
-                elem: 'item',
-                label: 'горшок с растением',
-                content: {
-                    block: 'icons',
-                    elem: 'tree'
-                }
-            },
-            {
-                elem: 'item',
-                label: 'прямоугольный стол (140x80)',
-                content: {
-                    block: 'icons',
-                    elem: 'table'
-                }
+                content: [
+                    'Управление мышкой или клавишами курсора.',
+                    '<code>→, ←, ↑, ↓, space</code> — повернуть.',
+                    'Сдвиг по умолчанию на 5px, с зажатым <code>shift</code> — 1px.',
+                    'Можно выделять через <code>shift</code> несколько элементов и перемещать их вместе.'
+                ].map(function(str) {
+                    return {
+                        tag: 'p',
+                        content: str
+                    };
+                })
             }
         ]);
     });
-}
+
+};

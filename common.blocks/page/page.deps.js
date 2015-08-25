@@ -6,6 +6,7 @@
             elem: 'dom',
             mods: { 'init': 'auto' }
         },
-        { block: 'icons' }
+        { block: 'icons' },
+        { block: 'room-object' }
     ]
 })

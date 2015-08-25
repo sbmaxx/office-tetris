@@ -7,22 +7,20 @@ modules.define('json', ['i-bem__dom', 'functions__debounce', 'movable'], functio
 
                     this._states = this.params;
 
-                    //this._state = this._states[0];
+                    this._state = this._states[0];
 
-                    //this._updateState = debounce(this._updateState, 250, this);
+                    this._movable = this.findBlockOutside('page').findBlocksInside('movable');
 
-                    //this._movable = this.findBlockOutside('page').findBlocksInside('movable');
-                    //
                     Movable.on('transform', function(e, data) {
                         this._onMovableTransform(e, data);
                     }, this);
                     Movable.on('select', function(e, data) {
                         this._onMovableSelect(e, data);
                     }, this);
-                    //
-                    //this.bindTo('variant', 'click', this._onVariantClick);
 
-                    // this._updateState();
+                    this.bindTo('variant', 'click', this._onVariantClick);
+
+                     this._updateState();
 
                 }
             }
@@ -44,8 +42,7 @@ modules.define('json', ['i-bem__dom', 'functions__debounce', 'movable'], functio
             this._state = this._states[$(e.currentTarget).index()];
             this._updateState();
         },
-        _onMovableTransform: function(e, data, block, index) {
-            this._state.data[index] = block.getTransform();
+        _onMovableTransform: function() {
             this._updateState();
         },
         _onMovableSelect: function() {
@@ -53,7 +50,7 @@ modules.define('json', ['i-bem__dom', 'functions__debounce', 'movable'], functio
                 return block.getTransform();
             }));
         },
-        _updateState: function() {
+        _updateState: debounce(function() {
             this.elem('dump').text(JSON.stringify(this._state.data));
 
             this._movable.forEach(function(block, i) {
@@ -61,7 +58,7 @@ modules.define('json', ['i-bem__dom', 'functions__debounce', 'movable'], functio
                     block.setTransform(this._state.data[i]);
                 }
             }.bind(this));
-        },
+        }, 250),
         _updateDebug: function(data) {
             this.elem('selected').text(JSON.stringify(data));
         }

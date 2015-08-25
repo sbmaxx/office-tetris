@@ -1,26 +1,20 @@
-modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures'], function(provide, BEMDOM, channels) {
+modules.define('room-object', ['i-bem__dom', 'events__channels', 'polymer-gestures'], function(provide, BEMDOM, channels) {
 
     var selected = [];
 
-    provide(BEMDOM.decl('movable', {
+    provide(BEMDOM.decl(this.name, {
 
         onSetMod: {
 
             js: {
                 inited: function() {
 
-                    this.transform = {
-                        x: 0,
-                        y: 0,
-                        angle: 0
-                    };
-
-                    this.plainElem = this.domElem.get(0);
-
                     channels('default').on('key', this._onKey, this);
                     channels('default').on('click', this._onOutsideClick, this);
 
                     this.on('track', this._onTrack, this);
+
+                    this._updateTransform(false);
 
                 }
             },
@@ -59,11 +53,11 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
             }
 
             if (data.x) {
-                this.transform.x += data.x;
+                this.params.x += data.x;
             }
 
             if (data.y) {
-                this.transform.y += data.y;
+                this.params.y += data.y;
             }
 
             this._updateTransform();
@@ -86,7 +80,6 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
                 return;
             }
 
-
             var multiplier = originalEvent.shiftKey ? 1 : 5;
 
             switch(originalEvent.keyCode) {
@@ -104,7 +97,7 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
 
                 // right arrow
                 case 39:
-                    this._moveX(1 * multiplier);
+                    this._moveX(multiplier);
                     originalEvent.preventDefault();
                     break;
 
@@ -116,7 +109,7 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
 
                 // down arrow
                 case 40:
-                    this._moveY(1 * multiplier);
+                    this._moveY(multiplier);
                     originalEvent.preventDefault();
                     break;
 
@@ -130,27 +123,33 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
         },
 
         getTransform: function() {
-            return this.transform;
+            return this.params;
         },
 
         setTransform: function(transform) {
-            this.transform = transform;
+            this.params = transform;
             this._updateTransform(false);
         },
 
         _updateTransform: function(trigger) {
 
-            var transform = this.transform,
+            this._updateStyle(this.domElem.get(0), this._getCSSStyle());
+
+            this._updateLabel(this.params.angle);
+
+            if (trigger !== false) {
+                this.emit('transform', this.params);
+            }
+
+        },
+
+        _getCSSStyle: function() {
+
+            var transform = this.params,
                 translate = 'translate(' + transform.x + 'px, ' + transform.y + 'px)',
                 rotate = 'rotate(' + transform.angle + 'deg)';
 
-            this._updateStyle(this.plainElem, [translate, rotate].join(' '));
-
-            this._updateLabel(transform.angle);
-
-            if (trigger !== false) {
-                this.emit('transform', transform);
-            }
+            return [translate, rotate].join(' ');
 
         },
 
@@ -172,17 +171,17 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
         },
 
         _moveX: function(value) {
-            this.transform.x += value;
+            this.params.x += value;
             this._updateTransform();
         },
 
         _moveY: function(value) {
-            this.transform.y += value;
+            this.params.y += value;
             this._updateTransform();
         },
 
         _rotate: function() {
-            this.transform.angle = (this.transform.angle + 90) % 360;
+            this.params.angle = (this.params.angle + 90) % 360;
             this._updateTransform();
         },
 
@@ -194,9 +193,18 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
                 block.delMod('selected');
             });
             selected.length = 0;
+        },
+
+        getDefaultParams: function() {
+            return {
+                x: 0,
+                y: 0,
+                angle: 0
+            };
         }
 
     }, {
+
         live: function() {
             this.liveBindTo('track', function(e) {
                 this._onMouseTrack(e);
@@ -210,10 +218,21 @@ modules.define('movable', ['i-bem__dom', 'events__channels', 'polymer-gestures']
             this.liveBindTo('trackstart', function(e) {
                 this._onMouseTrackStart(e);
             });
+            return false;
         },
+
         getSelected: function() {
             return selected;
+        },
+
+        create: function(type, params) {
+            return bh.apply({
+                block: 'room-object',
+                type: type,
+                js: params
+            });
         }
+
     }));
 
 });
