@@ -835,34 +835,34 @@ module.exports = [
         data: [
             {
                 "x": 163,
-                "y": 546,
+                "y": 531,
                 "angle": 0,
                 "name": "table",
                 "login": "tenorok"
             },
             {
-                "x": 70,
-                "y": 215,
+                "x": 296,
+                "y": 226,
                 "angle": 0,
                 "name": "tree"
             },
             {
                 "x": 65,
-                "y": 452,
+                "y": 437,
                 "angle": 180,
                 "name": "table",
                 "login": "dndushkin"
             },
             {
                 "x": 163,
-                "y": 452,
+                "y": 437,
                 "angle": 180,
                 "name": "table",
                 "login": "invntrm"
             },
             {
                 "x": 65,
-                "y": 546,
+                "y": 531,
                 "angle": 0,
                 "name": "table",
                 "login": "yurich"
@@ -876,14 +876,14 @@ module.exports = [
             },
             {
                 "x": 166,
-                "y": 20,
+                "y": 40,
                 "angle": 180,
                 "name": "table",
                 "login": "xescoder"
             },
             {
                 "x": 69,
-                "y": 19,
+                "y": 39,
                 "angle": 180,
                 "name": "table",
                 "login": "cherninely"
@@ -897,39 +897,33 @@ module.exports = [
             },
             {
                 "x": 69,
-                "y": 115,
+                "y": 135,
                 "angle": 0,
                 "name": "table",
                 "login": "developer"
             },
             {
                 "x": 167,
-                "y": 114,
+                "y": 134,
                 "angle": 0,
                 "name": "table",
                 "login": "hjkos"
             },
             {
-                "x": 61,
-                "y": 369,
-                "angle": 0,
-                "name": "tree"
-            },
-            {
-                "x": 151,
-                "y": 331,
+                "x": 169,
+                "y": 340,
                 "angle": 0,
                 "name": "bean-bag"
             },
             {
-                "x": 149,
-                "y": 262,
+                "x": 165,
+                "y": 265,
                 "angle": 0,
                 "name": "bean-bag"
             },
             {
-                "x": 35,
-                "y": 319,
+                "x": 39,
+                "y": 317,
                 "angle": 90,
                 "name": "tv"
             },
@@ -962,10 +956,16 @@ module.exports = [
                 "login": "vorian"
             },
             {
-                "x": 334,
-                "y": 789,
+                "x": 333,
+                "y": 792,
                 "angle": 0,
                 "name": "bean-bag"
+            },
+            {
+                "x": 41,
+                "y": 770,
+                "angle": 0,
+                "name": "tree"
             }
         ]
     },
