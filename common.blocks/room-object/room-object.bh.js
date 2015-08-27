@@ -8,7 +8,7 @@ module.exports = function(bh) {
             }
         });
 
-        if (json.js.name === 'table') {
+        if (json.js.name === 'table' || json.js.name === 'corner') {
             ctx.mod('has-input', true);
             ctx.content([
                 { elem: 'placeholder' },
