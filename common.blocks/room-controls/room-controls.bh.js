@@ -16,7 +16,7 @@ module.exports = function(bh) {
         name: 'nexus',
         text: 'нексус'
     }, {
-        name: 'corner-table',
+        name: 'corner',
         text: 'угловой стол'
     }];
 
