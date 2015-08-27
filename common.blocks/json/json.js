@@ -1,67 +1,39 @@
-modules.define('json', ['i-bem__dom', 'functions__debounce', 'movable'], function(provide, BEMDOM, debounce, Movable) {
+modules.define('json', ['i-bem__dom'], function(provide, BEMDOM) {
 
     BEMDOM.decl('json', {
+
         onSetMod: {
             js: {
                 inited: function() {
 
-                    this._states = this.params;
+                    ZeroClipboard.config({ swfPath: '/common.blocks/zeroclipboard/zeroclipboard.swf' });
 
-                    this._state = this._states[0];
-
-                    this._movable = this.findBlockOutside('page').findBlocksInside('movable');
-
-                    Movable.on('transform', function(e, data) {
-                        this._onMovableTransform(e, data);
-                    }, this);
-                    Movable.on('select', function(e, data) {
-                        this._onMovableSelect(e, data);
-                    }, this);
-
-                    this.bindTo('variant', 'click', this._onVariantClick);
-
-                     this._updateState();
+                    var swf =  new ZeroClipboard(this.elem('button'));
+                    swf.on('copy', function(e) {
+                        this.showMessage();
+                        e.clipboardData.setData('text/plain', JSON.stringify(this.json, null, 2));
+                    }.bind(this));
 
                 }
             }
         },
-        onElemSetMod: {
-            variant: {
-                current: {
-                    yes: function() {
-                        var current = this.findElem('variant', 'current', 'yes');
-                        if (current) {
-                            this.delMod(current, 'current');
-                        }
-                    }
-                }
-            }
-        },
-        _onVariantClick: function(e) {
-            this.setMod($(e.currentTarget), 'current', 'yes');
-            this._state = this._states[$(e.currentTarget).index()];
-            this._updateState();
-        },
-        _onMovableTransform: function() {
-            this._updateState();
-        },
-        _onMovableSelect: function() {
-            this._updateDebug(Movable.getSelected().map(function(block) {
-                return block.getTransform();
-            }));
-        },
-        _updateState: debounce(function() {
-            this.elem('dump').text(JSON.stringify(this._state.data));
 
-            this._movable.forEach(function(block, i) {
-                if (this._state.data[i]) {
-                    block.setTransform(this._state.data[i]);
-                }
-            }.bind(this));
-        }, 250),
-        _updateDebug: function(data) {
-            this.elem('selected').text(JSON.stringify(data));
+        dump: function(json) {
+            this.json = json;
+            this.elem('pre').html(JSON.stringify(this.json, null, 2));
+            hljs.highlightBlock(this.elem('pre').get(0));
+        },
+
+        showMessage: function() {
+
+            this.setMod(this.elem('message'), 'visible', true);
+
+            setTimeout(function() {
+                this.delMod(this.elem('message'), 'visible');
+            }.bind(this), 2000);
+
         }
+
     });
 
     provide(BEMDOM);

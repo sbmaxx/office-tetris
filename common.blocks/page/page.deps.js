@@ -7,6 +7,8 @@
             mods: { 'init': 'auto' }
         },
         { block: 'icons' },
-        { block: 'room-object' }
+        { block: 'room-object' },
+        { block: 'room' },
+        { block: 'functions', elems: ['debounce', 'throttle'] }
     ]
 })

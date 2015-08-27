@@ -4,14 +4,7 @@ modules.define('page', ['i-bem__dom', 'events__channels'], function(provide, BEM
         onSetMod: {
             js: {
                 inited: function() {
-                    console.log('b-page inited');
-                    this.bindToDoc('keydown', function(e) {
-                        console.log('keydown');
-                        channels('default').emit('key', e);
-                    });
-                    this.bindTo('click', function(e) {
-                        channels('default').emit('click', e);
-                    });
+                    this.findBlockInside('json');
                 }
             }
         }

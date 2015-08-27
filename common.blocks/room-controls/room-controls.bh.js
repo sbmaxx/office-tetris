@@ -14,7 +14,7 @@ module.exports = function(bh) {
         text: 'прямоугольный стол'
     }];
 
-    bh.match('controls', function(ctx) {
+    bh.match('room-controls', function(ctx) {
         ctx.js(true);
         ctx.mix({ block: 'clearfix' });
         ctx.content(controls.map(function(control) {
@@ -25,7 +25,7 @@ module.exports = function(bh) {
         }))
     });
 
-    bh.match('controls__item', function(ctx, json) {
+    bh.match('room-controls__item', function(ctx, json) {
         var control = json.control;
         ctx.content([
             {
@@ -41,7 +41,7 @@ module.exports = function(bh) {
             },
             {
                 block: 'icons',
-                mix: [{ block: 'controls', elem: 'icon' }],
+                mix: [{ block: 'room-controls', elem: 'icon' }],
                 mods: {
                     type: control.name,
                     small: true
@@ -50,11 +50,11 @@ module.exports = function(bh) {
         ], true)
     });
 
-    bh.match('controls__label', function(ctx) {
+    bh.match('room-controls__label', function(ctx) {
         ctx.tag('span')
     });
 
-    bh.match('controls__action', function(ctx) {
+    bh.match('room-controls__action', function(ctx) {
         ctx.tag('span');
         ctx.content('Добавить');
     });

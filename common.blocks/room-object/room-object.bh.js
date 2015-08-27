@@ -4,35 +4,44 @@ module.exports = function(bh) {
         ctx.mix({
             block: 'icons',
             mods: {
-                type: json.type
+                type: json.js.name
             }
         });
 
-        if (json.name === 'table') {
-            ctx.mod('has-label', true);
+        if (json.js.name === 'table') {
+            ctx.mod('has-input', true);
+            ctx.content([
+                { elem: 'placeholder' },
+                { elem: 'input' }
+            ]);
         }
 
     });
 
-    bh.match('room-object__label', function(ctx, json) {
+    bh.match('room-object__input', function(ctx) {
+        ctx.content({
+            block: 'input',
+            mods: { theme: 'islands', size: 'm' },
+            placeholder: 'Логин'
+        });
+    });
 
-        var content = [];
+    bh.match('room-object__developer', function(ctx, json) {
 
-        if (json.developer) {
-            content.push({
+        ctx.content([
+            {
+                elem: 'avatar',
                 tag: 'img',
                 attrs: {
-                    src: 'https://center.yandex-team.ru/api/v1/user/' + json.developer + '/avatar/24.jpg'
+                    src: 'https://center.yandex-team.ru/api/v1/user/' + json.login + '/avatar/24.jpg'
                 }
-            });
-        }
-
-        content.push({
-            tag: 'span',
-            content: json.label
-        });
-
-        ctx.content(content);
+            },
+            {
+                elem: 'login',
+                tag: 'span',
+                content: json.login
+            }
+        ]);
 
     })
 };

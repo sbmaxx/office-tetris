@@ -10,7 +10,6 @@ modules.define('polymer-gestures', ['jquery'], function(provide, $) {
     ['track', 'pinch', 'rotate', 'trackend', 'pinchstart', 'pinchend'].forEach(function(event) {
         $.event.special[event] = {
             add: function() {
-                console.log('event binded');
                 // нет нужды вызывать какой-либоу callback здесь
                 // т.к. внутри полимера происходит this.dispatchEvent
                 // и это событие обрабатывается jQuery
