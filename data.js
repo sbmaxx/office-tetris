@@ -1250,5 +1250,285 @@ module.exports = [
                 "login": "developer"
             }
         ]
+    },
+    {
+        id: 'strange',
+        text: 'Угловые тимлиды',
+        data: [
+            {
+                "x": 163,
+                "y": 521,
+                "angle": 0,
+                "name": "table",
+                "login": "tenorok"
+            },
+            {
+                "x": 303,
+                "y": 237,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 65,
+                "y": 427,
+                "angle": 180,
+                "name": "table",
+                "login": "dndushkin"
+            },
+            {
+                "x": 163,
+                "y": 427,
+                "angle": 180,
+                "name": "table",
+                "login": "invntrm"
+            },
+            {
+                "x": 65,
+                "y": 521,
+                "angle": 0,
+                "name": "table",
+                "login": "yurich"
+            },
+            {
+                "x": 320,
+                "y": 325,
+                "angle": 180,
+                "name": "table",
+                "login": "allinne"
+            },
+            {
+                "x": 69,
+                "y": 39,
+                "angle": 180,
+                "name": "table",
+                "login": "cherninely"
+            },
+            {
+                "x": 66,
+                "y": 279,
+                "angle": 90,
+                "name": "corner",
+                "login": "nerevar"
+            },
+            {
+                "x": 66,
+                "y": 132,
+                "angle": 0,
+                "name": "table",
+                "login": "developer"
+            },
+            {
+                "x": 165,
+                "y": 39,
+                "angle": 180,
+                "name": "table",
+                "login": "hjkos"
+            },
+            {
+                "x": 344,
+                "y": 516,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 306,
+                "y": 584,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 306,
+                "y": 158,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 372,
+                "y": 593,
+                "angle": 90,
+                "name": "tv"
+            },
+            {
+                "x": 70,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "sbmaxx"
+            },
+            {
+                "x": 70,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "eroshinev"
+            },
+            {
+                "x": 201,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "beam"
+            },
+            {
+                "x": 203,
+                "y": 665,
+                "angle": 180,
+                "name": "table",
+                "login": "vorian"
+            },
+            {
+                "x": 334,
+                "y": 789,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 163,
+                "y": 279,
+                "angle": 270,
+                "name": "corner",
+                "login": "xescoder"
+            }
+        ]
+    },
+    {
+        id: 'alone_in_center',
+        text: 'Неревар в центре',
+        data: [
+            {
+                "x": 163,
+                "y": 521,
+                "angle": 0,
+                "name": "table",
+                "login": "tenorok"
+            },
+            {
+                "x": 303,
+                "y": 237,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 65,
+                "y": 427,
+                "angle": 180,
+                "name": "table",
+                "login": "dndushkin"
+            },
+            {
+                "x": 163,
+                "y": 427,
+                "angle": 180,
+                "name": "table",
+                "login": "invntrm"
+            },
+            {
+                "x": 65,
+                "y": 521,
+                "angle": 0,
+                "name": "table",
+                "login": "yurich"
+            },
+            {
+                "x": 320,
+                "y": 325,
+                "angle": 180,
+                "name": "table",
+                "login": "allinne"
+            },
+            {
+                "x": 69,
+                "y": 39,
+                "angle": 180,
+                "name": "table",
+                "login": "cherninely"
+            },
+            {
+                "x": 60,
+                "y": 290,
+                "angle": 90,
+                "name": "corner",
+                "login": "nerevar"
+            },
+            {
+                "x": 162,
+                "y": 133,
+                "angle": 0,
+                "name": "table",
+                "login": "developer"
+            },
+            {
+                "x": 64,
+                "y": 134,
+                "angle": 0,
+                "name": "table",
+                "login": "hjkos"
+            },
+            {
+                "x": 344,
+                "y": 516,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 306,
+                "y": 584,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 306,
+                "y": 158,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 372,
+                "y": 593,
+                "angle": 90,
+                "name": "tv"
+            },
+            {
+                "x": 70,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "sbmaxx"
+            },
+            {
+                "x": 70,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "eroshinev"
+            },
+            {
+                "x": 201,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "beam"
+            },
+            {
+                "x": 203,
+                "y": 665,
+                "angle": 180,
+                "name": "table",
+                "login": "vorian"
+            },
+            {
+                "x": 334,
+                "y": 789,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 165,
+                "y": 39,
+                "angle": 180,
+                "name": "table",
+                "login": "xescoder"
+            }
+        ]
     }
 ];
