@@ -756,20 +756,20 @@ module.exports = [
                 "login": "hjkos"
             },
             {
-                "x": 61,
-                "y": 369,
+                "x": 52,
+                "y": 768,
                 "angle": 0,
                 "name": "tree"
             },
             {
-                "x": 114,
-                "y": 362,
+                "x": 69,
+                "y": 360,
                 "angle": 0,
                 "name": "bean-bag"
             },
             {
-                "x": 109,
-                "y": 230,
+                "x": 298,
+                "y": 181,
                 "angle": 0,
                 "name": "bean-bag"
             },
@@ -814,14 +814,14 @@ module.exports = [
                 "name": "bean-bag"
             },
             {
-                "x": 170,
+                "x": 180,
                 "y": 237,
                 "angle": 180,
                 "name": "table",
                 "login": "developer"
             },
             {
-                "x": 170,
+                "x": 180,
                 "y": 330,
                 "angle": 0,
                 "name": "table",
