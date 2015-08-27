@@ -520,18 +520,24 @@ module.exports = [
                 "login": "eroshinev"
             },
             {
-                "x": 286,
-                "y": 843,
+                "x": 201,
+                "y": 844,
                 "angle": 0,
                 "name": "table",
                 "login": "beam"
             },
             {
-                "x": 180,
-                "y": 664,
+                "x": 203,
+                "y": 665,
                 "angle": 180,
                 "name": "table",
                 "login": "vorian"
+            },
+            {
+                "x": 334,
+                "y": 789,
+                "angle": 0,
+                "name": "bean-bag"
             }
         ]
     },
