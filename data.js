@@ -464,7 +464,7 @@ module.exports = [
                 "x": 321,
                 "y": 542,
                 "angle": 0,
-                "name": "table",
+                "name": "corner",
                 "login": "tenorok"
             },
             {
