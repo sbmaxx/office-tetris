@@ -12,6 +12,9 @@ module.exports = function(bh) {
     }, {
         name: 'table',
         text: 'прямоугольный стол'
+    }, {
+        name: 'nexus',
+        text: 'нексус'
     }];
 
     bh.match('room-controls', function(ctx) {
