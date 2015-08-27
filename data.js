@@ -400,5 +400,139 @@ module.exports = [
                 "login": "vorian"
             }
         ]
+    },
+    {
+        id: 'zombik_at_center',
+        text: 'зомбик по центру',
+        data: [
+            {
+                "x": 163,
+                "y": 546,
+                "angle": 0,
+                "name": "table",
+                "login": "nerevar"
+            },
+            {
+                "x": 70,
+                "y": 215,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 65,
+                "y": 452,
+                "angle": 180,
+                "name": "table",
+                "login": "dndushkin"
+            },
+            {
+                "x": 163,
+                "y": 452,
+                "angle": 180,
+                "name": "table",
+                "login": "invntrm"
+            },
+            {
+                "x": 65,
+                "y": 546,
+                "angle": 0,
+                "name": "table",
+                "login": "yurich"
+            },
+            {
+                "x": 320,
+                "y": 325,
+                "angle": 180,
+                "name": "table",
+                "login": "allinne"
+            },
+            {
+                "x": 166,
+                "y": 20,
+                "angle": 180,
+                "name": "table",
+                "login": "xescoder"
+            },
+            {
+                "x": 69,
+                "y": 19,
+                "angle": 180,
+                "name": "table",
+                "login": "cherninely"
+            },
+            {
+                "x": 321,
+                "y": 542,
+                "angle": 0,
+                "name": "table",
+                "login": "tenorok"
+            },
+            {
+                "x": 69,
+                "y": 115,
+                "angle": 0,
+                "name": "table",
+                "login": "developer"
+            },
+            {
+                "x": 167,
+                "y": 114,
+                "angle": 0,
+                "name": "table",
+                "login": "hjkos"
+            },
+            {
+                "x": 61,
+                "y": 369,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 151,
+                "y": 331,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 149,
+                "y": 262,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 35,
+                "y": 319,
+                "angle": 90,
+                "name": "tv"
+            },
+            {
+                "x": 70,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "sbmaxx"
+            },
+            {
+                "x": 70,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "eroshinev"
+            },
+            {
+                "x": 286,
+                "y": 843,
+                "angle": 0,
+                "name": "table",
+                "login": "beam"
+            },
+            {
+                "x": 180,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "vorian"
+            }
+        ]
     }
 ];
