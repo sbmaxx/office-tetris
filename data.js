@@ -544,13 +544,13 @@ module.exports = [
     {
         id: 'allinne',
         text: 'вариант Алины',
-        data: [
+        data:[
             {
                 "x": 163,
                 "y": 546,
                 "angle": 0,
                 "name": "table",
-                "login": "nerevar"
+                "login": "tenorok"
             },
             {
                 "x": 81,
@@ -601,13 +601,6 @@ module.exports = [
                 "login": "cherninely"
             },
             {
-                "x": 65,
-                "y": 310,
-                "angle": 0,
-                "name": "table",
-                "login": "tenorok"
-            },
-            {
                 "x": 69,
                 "y": 115,
                 "angle": 0,
@@ -622,19 +615,19 @@ module.exports = [
                 "login": "hjkos"
             },
             {
-                "x": 177,
-                "y": 238,
+                "x": 165,
+                "y": 237,
                 "angle": 0,
                 "name": "tree"
             },
             {
                 "x": 259,
-                "y": 510,
+                "y": 520,
                 "angle": 0,
                 "name": "bean-bag"
             },
             {
-                "x": 177,
+                "x": 170,
                 "y": 305,
                 "angle": 0,
                 "name": "bean-bag"
@@ -672,6 +665,19 @@ module.exports = [
                 "angle": 180,
                 "name": "table",
                 "login": "vorian"
+            },
+            {
+                "x": 71,
+                "y": 302,
+                "angle": 90,
+                "name": "corner",
+                "login": "nerevar"
+            },
+            {
+                "x": 175,
+                "y": 847,
+                "angle": 0,
+                "name": "nexus"
             }
         ]
     },
