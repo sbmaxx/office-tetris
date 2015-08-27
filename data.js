@@ -534,5 +534,139 @@ module.exports = [
                 "login": "vorian"
             }
         ]
+    },
+    {
+        id: 'allinne',
+        text: 'вариант Алины',
+        data: [
+            {
+                "x": 163,
+                "y": 546,
+                "angle": 0,
+                "name": "table",
+                "login": "nerevar"
+            },
+            {
+                "x": 81,
+                "y": 237,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 65,
+                "y": 452,
+                "angle": 180,
+                "name": "table",
+                "login": "dndushkin"
+            },
+            {
+                "x": 163,
+                "y": 452,
+                "angle": 180,
+                "name": "table",
+                "login": "invntrm"
+            },
+            {
+                "x": 65,
+                "y": 546,
+                "angle": 0,
+                "name": "table",
+                "login": "yurich"
+            },
+            {
+                "x": 327,
+                "y": 320,
+                "angle": 180,
+                "name": "table",
+                "login": "allinne"
+            },
+            {
+                "x": 166,
+                "y": 20,
+                "angle": 180,
+                "name": "table",
+                "login": "xescoder"
+            },
+            {
+                "x": 69,
+                "y": 19,
+                "angle": 180,
+                "name": "table",
+                "login": "cherninely"
+            },
+            {
+                "x": 65,
+                "y": 310,
+                "angle": 0,
+                "name": "table",
+                "login": "tenorok"
+            },
+            {
+                "x": 69,
+                "y": 115,
+                "angle": 0,
+                "name": "table",
+                "login": "developer"
+            },
+            {
+                "x": 167,
+                "y": 114,
+                "angle": 0,
+                "name": "table",
+                "login": "hjkos"
+            },
+            {
+                "x": 177,
+                "y": 238,
+                "angle": 0,
+                "name": "tree"
+            },
+            {
+                "x": 259,
+                "y": 510,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 177,
+                "y": 305,
+                "angle": 0,
+                "name": "bean-bag"
+            },
+            {
+                "x": 360,
+                "y": 588,
+                "angle": 270,
+                "name": "tv"
+            },
+            {
+                "x": 70,
+                "y": 844,
+                "angle": 0,
+                "name": "table",
+                "login": "sbmaxx"
+            },
+            {
+                "x": 70,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "eroshinev"
+            },
+            {
+                "x": 286,
+                "y": 843,
+                "angle": 0,
+                "name": "table",
+                "login": "beam"
+            },
+            {
+                "x": 180,
+                "y": 664,
+                "angle": 180,
+                "name": "table",
+                "login": "vorian"
+            }
+        ]
     }
 ];
