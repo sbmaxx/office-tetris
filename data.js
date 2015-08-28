@@ -406,35 +406,35 @@ module.exports = [
         text: 'зомбик по центру',
         data: [
             {
-                "x": 163,
-                "y": 546,
+                "x": 168,
+                "y": 531,
                 "angle": 0,
                 "name": "table",
                 "login": "nerevar"
             },
             {
-                "x": 70,
-                "y": 215,
+                "x": 49,
+                "y": 768,
                 "angle": 0,
                 "name": "tree"
             },
             {
-                "x": 65,
-                "y": 452,
+                "x": 70,
+                "y": 437,
                 "angle": 180,
                 "name": "table",
                 "login": "dndushkin"
             },
             {
-                "x": 163,
-                "y": 452,
+                "x": 168,
+                "y": 437,
                 "angle": 180,
                 "name": "table",
                 "login": "invntrm"
             },
             {
-                "x": 65,
-                "y": 546,
+                "x": 70,
+                "y": 531,
                 "angle": 0,
                 "name": "table",
                 "login": "yurich"
@@ -448,14 +448,14 @@ module.exports = [
             },
             {
                 "x": 166,
-                "y": 20,
+                "y": 45,
                 "angle": 180,
                 "name": "table",
                 "login": "xescoder"
             },
             {
                 "x": 69,
-                "y": 19,
+                "y": 44,
                 "angle": 180,
                 "name": "table",
                 "login": "cherninely"
@@ -469,33 +469,33 @@ module.exports = [
             },
             {
                 "x": 69,
-                "y": 115,
+                "y": 140,
                 "angle": 0,
                 "name": "table",
                 "login": "developer"
             },
             {
                 "x": 167,
-                "y": 114,
+                "y": 139,
                 "angle": 0,
                 "name": "table",
                 "login": "hjkos"
             },
             {
-                "x": 61,
-                "y": 369,
+                "x": 319,
+                "y": 246,
                 "angle": 0,
                 "name": "tree"
             },
             {
-                "x": 151,
-                "y": 331,
+                "x": 295,
+                "y": 181,
                 "angle": 0,
                 "name": "bean-bag"
             },
             {
-                "x": 149,
-                "y": 262,
+                "x": 164,
+                "y": 294,
                 "angle": 0,
                 "name": "bean-bag"
             },
