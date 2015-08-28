@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "enb server",
+    "update": "git pull --rebase; rm -rf .enb/tmp/*; ./node_modules/.bin/enb server --port=8082",
     "postinstall": "npm run deps",
     "deps": "bower i"
   },

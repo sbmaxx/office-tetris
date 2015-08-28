@@ -2,9 +2,6 @@ module.exports = function(bh) {
     bh.match('json', function(ctx) {
         ctx.js(true);
         ctx.content([{
-            elem: 'pre',
-            tag: 'pre'
-        }, {
             block: 'button',
             mix: { block: 'json', elem: 'button' },
             mods: { size : 'm', theme : 'islands' },

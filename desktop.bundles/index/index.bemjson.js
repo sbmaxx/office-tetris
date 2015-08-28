@@ -50,7 +50,7 @@ module.exports = {
             elemMods: { position: 'right' },
             content: [{
                 elem: 'section',
-                title: 'JSON',
+                title: 'JSON текущей рассадки',
                 content: {
                     block: 'json'
                 }

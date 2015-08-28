@@ -20,8 +20,6 @@ modules.define('json', ['i-bem__dom'], function(provide, BEMDOM) {
 
         dump: function(json) {
             this.json = json;
-            this.elem('pre').html(JSON.stringify(this.json, null, 2));
-            hljs.highlightBlock(this.elem('pre').get(0));
         },
 
         showMessage: function() {
